@@ -1,0 +1,112 @@
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: lightblue; 
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #legend {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 6px;
+    background: #f1f1f1;   
+    font-size: 14px;
+    line-height: 1.5;
+    color: black;          
+    min-width: 130px;
+  }
+  
+  .main-content {
+    text-align: center;
+  }
+  
+  #clock {
+    width: 280px;
+    height: 280px;
+    border: 6px solid black;
+    border-radius: 50%;
+    margin: 20px auto;
+    position: relative;
+    background: #f9f9f9;
+  }
+  
+  .hand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+  }
+  
+  #hour-hand {
+    width: 6px;
+    height: 70px;
+    background: brown;
+    margin-left: -3px;
+    margin-top: -70px;
+  }
+  
+  #minute-hand {
+    width: 4px;
+    height: 90px;
+    background: orange;
+    margin-left: -2px;
+    margin-top: -90px;
+  }
+  
+  #second-hand {
+    width: 2px;
+    height: 110px;
+    background: red;
+    margin-left: -1px;
+    margin-top: -110px;
+  }
+  
+  #center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #digital {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 16px;
+    font-family: monospace;
+  }
+  
+  #food-display {
+    font-size: 40px;
+    margin: 12px;
+    text-shadow: 0 0 8px gold, 0 0 16px orange;
+  }
+  
+  #reminder {
+    font-style: italic;
+    margin: 5px 0;
+  }
+  
+  .btn-row {
+    margin: 10px 0;
+  }
+  
+  button {
+    margin: 5px;
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    background: lightgray;
+  }

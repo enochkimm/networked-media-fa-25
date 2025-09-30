@@ -1,0 +1,32 @@
+p{
+    color: yellow;
+    background-color: black;
+    border: solid cyan 3px;
+    padding: 10px;
+    margin: 10px;
+
+    /* allows us to manipulate layering, positive numbers have layers closer to the front */
+    z-index: 10;
+}
+
+.special{
+    margin-top: 50px;
+}
+
+body{
+    /* sets the origin point of the absolute element to be this element's top left corner */
+    position: relative;
+}
+
+.myimg{
+    /* float: right; */
+    /* positions the element with respect to the element with relative positioning */
+    position: absolute;
+    /* moves the object 0px from the top, and 0px from the right */
+    top: 0px;
+    right: 0px;
+
+    /* allows us to manipulate layering */
+    /* negative numbers position further back, need to have a bigger number somewhere */
+    z-index: -10;
+}
