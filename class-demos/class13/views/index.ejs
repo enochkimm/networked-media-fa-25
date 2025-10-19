@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>class 13 👍</title>
+
+        <link href="style.css" rel="stylesheet">
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <!-- <%- %> allows us to include other partial ejs files  -->
+        <%- include('nav.ejs', {}) %>
+        
+        <h1>this is an ejs file, but it looks like html</h1>
+
+        <!-- this is an open and closing bracket for using ejs -->
+        <!-- we need to wrap all js code inside these brackets -->
+        <% %>
+
+        <!-- to display the output of a variable, we need <%= %> -->
+        <% if(visible) {%>
+            <%=message %>
+        <% } %>
+
+        <br />
+
+        <%= paths[0] %>
+
+        <% for(let p of paths){ %>
+            <h2> <%= p %> </h2>
+            <p>this is the path</p>
+        <% } %>
+    </body>
+</html>
