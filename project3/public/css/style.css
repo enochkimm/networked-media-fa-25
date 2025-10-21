@@ -1,0 +1,336 @@
+/* base style */
+   * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Inter", sans-serif;
+    background: #f5f6fa;
+    color: #1e1e1e;
+    line-height: 1.5;
+  }
+  
+  /* nav bar */
+  header {
+    background: #5457f6; /* main blue col */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  header .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h2 {
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+  
+  /* nav links */
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav a {
+    color: #ffffffcc;
+    text-decoration: none;
+    margin-left: 1.2rem;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.2s;
+  }
+  
+  nav a:hover { color: #fff; }
+  
+  nav a.active {
+    color: #fff;
+    font-weight: 700;
+  }
+  
+  nav a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #f9d423;
+    border-radius: 3px;
+  }
+  
+  /* points & title box */
+  .nav-points-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.35rem 0.8rem;
+    border-radius: 8px;
+    min-width: 70px;
+  }
+  
+  #nav-points {
+    font-weight: 600;
+    color: #f9d423;
+    font-size: 0.95rem;
+  }
+  
+  .nav-title {
+    font-size: 0.75rem;
+    color: #fff;
+    opacity: 0.85;
+    margin-top: 0.15rem;
+    text-align: center;
+  }
+  
+  /* home page */
+  .hero {
+    background: #5457f6;
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem 5rem;
+  }
+  
+  .hero-inner {
+    max-width: 650px;
+    margin: auto;
+  }
+  
+  .hero h1 {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 2.2rem;
+  }
+  
+  .hero-buttons a {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    margin: 0.4rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  
+  .btn-light { background: white; color: #5457f6; }
+  .btn-dark { background: #2e3192; color: white; }
+  
+  .btn-light:hover, .btn-dark:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* stats box */
+  .stats {
+    background: #fff;
+    text-align: center;
+    padding: 3rem 2rem;
+    width: 90%;
+    max-width: 800px;
+    margin: 3rem auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .stats h3 {
+    color: #2e3192;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+  
+  /* submit page */
+  .form-section {
+    max-width: 420px;
+    margin: 4rem auto;
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 14px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+  }
+  
+  form input, form textarea {
+    width: 100%;
+    padding: 0.9rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-family: inherit;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 8px;
+    background: #5457f6;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  form button:hover { background: #3739e0; }
+  
+  #points-display {
+    text-align: center;
+    color: #555;
+    margin-top: 0.8rem;
+    font-weight: 500;
+  }
+  
+  /* archive page */
+  .archive {
+    width: 90%;
+    max-width: 900px;
+    margin: 4rem auto;
+  }
+  
+  .tab-card {
+    background: #fff;
+    padding: 1.5rem 1.8rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+    transition: 0.2s;
+  }
+  
+  .tab-card:hover { transform: translateY(-3px); }
+  
+  .tab-title {
+    font-weight: 600;
+    color: #2e3192;
+    text-decoration: none;
+  }
+  
+  .tab-desc { margin: 0.6rem 0; color: #555; }
+  
+  .tab-meta { font-size: 0.9rem; color: #888; }
+  
+  /* leaderboards page */
+  .leaderboard {
+    width: 90%;
+    max-width: 700px;
+    margin: 4rem auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 2.5rem;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  th, td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  th {
+    background: #5457f6;
+    color: white;
+    font-weight: 600;
+  }
+  
+  tr:nth-child(even) { background: #fafaff; }
+  tr:hover { background: #f3f3ff; }
+  
+  .leaderboard table th,
+  .leaderboard table td {
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .leaderboard table td.points {
+    font-weight: 700;
+    color: #2e3192;
+  }
+  
+  /* reactions */
+  .reactions {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.6rem;
+    flex-wrap: wrap;
+  }
+  
+  .react-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  
+  .react-btn:hover {
+    transform: scale(1.3);
+  }
+  
+  .react-count {
+    font-weight: 600;
+    color: #2e3192;
+    margin-right: 0.8rem;
+  }
+  
+  .react-btn.bump {
+    animation: pop 0.3s ease;
+  }
+  
+  /* footer */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+  }
+  
+  footer a {
+    color: #5457f6;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  footer a:hover { text-decoration: underline; }
+  
+  /* mobile fit */
+  @media (max-width: 700px) {
+    header .container {
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+  
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-points-box {
+      margin-top: 0.5rem;
+    }
+  
+    .leaderboard {
+      width: 95%;
+    }
+  }

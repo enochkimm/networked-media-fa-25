@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Messy Tabs Archive</title>
+  <!-- inter font load -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  
+  <header>
+    <div class="container">
+      <!-- title -->
+      <h2>Messy Tabs Archive</h2>
+
+      <!-- nav bar -->
+      <nav>
+        <a href="/" class="<%= (page === 'home') ? 'active' : '' %>">Home</a>
+        <a href="/archive" class="<%= (page === 'archive') ? 'active' : '' %>">Archive</a>
+        <a href="/submit" class="<%= (page === 'submit') ? 'active' : '' %>">Submit</a>
+        <a href="/leaderboard" class="<%= (page === 'leaderboard') ? 'active' : '' %>">Leaderboard</a>
+
+        <div class="nav-points-box">
+          <div id="nav-points">🔥 0</div>
+          <div id="nav-title" class="nav-title">New Member</div> <!-- user rank/title -->
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- main content-->
+  <main class="archive">
+    <% if (tabs.length === 0) { %>
+      <!-- message if no submissions -->
+      <p class="empty">No tabs have been released yet.</p>
+    <% } else { %>
+      <!-- loop through all submitted tabs -->
+      <% tabs.forEach((tab, index) => { %>
+
+        <!-- submission card -->
+        <div class="tab-card">
+          <!-- link -->
+          <a href="<%= tab.url %>" target="_blank" class="tab-title"><%= tab.url %></a>
+
+          <!-- desc -->
+          <p class="tab-desc"><%= tab.description %></p>
+
+          <!-- who and when -->
+          <p class="tab-meta">
+            By <%= tab.submittedBy %> — <%= new Date(tab.timestamp).toLocaleDateString() %>
+          </p>
+
+          <!-- reactions -->
+          <div class="reactions">
+
+            <button class="react-btn"
+                    data-index="<%= index %>"
+                    data-id="<%= (tab.url + tab.timestamp).replace(/[^a-zA-Z0-9]/g, '') %>"
+                    data-type="clap">👏</button>
+            <span class="react-count"><%= tab.reactions?.clap || 0 %></span>
+
+            <button class="react-btn"
+                    data-index="<%= index %>"
+                    data-id="<%= (tab.url + tab.timestamp).replace(/[^a-zA-Z0-9]/g, '') %>"
+                    data-type="heart">❤️</button>
+            <span class="react-count"><%= tab.reactions?.heart || 0 %></span>
+
+            <button class="react-btn"
+                    data-index="<%= index %>"
+                    data-id="<%= (tab.url + tab.timestamp).replace(/[^a-zA-Z0-9]/g, '') %>"
+                    data-type="fire">🔥</button>
+            <span class="react-count"><%= tab.reactions?.fire || 0 %></span>
+
+            <button class="react-btn"
+                    data-index="<%= index %>"
+                    data-id="<%= (tab.url + tab.timestamp).replace(/[^a-zA-Z0-9]/g, '') %>"
+                    data-type="idea">💡</button>
+            <span class="react-count"><%= tab.reactions?.idea || 0 %></span>
+
+            <button class="react-btn"
+                    data-index="<%= index %>"
+                    data-id="<%= (tab.url + tab.timestamp).replace(/[^a-zA-Z0-9]/g, '') %>"
+                    data-type="laugh">😂</button>
+            <span class="react-count"><%= tab.reactions?.laugh || 0 %></span>
+          </div>
+        </div>
+      <% }); %>
+    <% } %>
+  </main>
+
+  <!-- footer -->
+  <footer><a href="/">← Back Home</a></footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

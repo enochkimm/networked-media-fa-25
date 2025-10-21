@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Messy Tabs Society</title>
+  <!-- inter font load -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <!-- title -->
+      <h2>Messy Tabs Society</h2>
+
+      <!-- nav bar -->
+      <nav>
+        <a href="/" class="<%= (page === 'home') ? 'active' : '' %>">Home</a>
+        <a href="/archive" class="<%= (page === 'archive') ? 'active' : '' %>">Archive</a>
+        <a href="/submit" class="<%= (page === 'submit') ? 'active' : '' %>">Submit</a>
+        <a href="/leaderboard" class="<%= (page === 'leaderboard') ? 'active' : '' %>">Leaderboard</a>
+
+        <div class="nav-points-box">
+          <div id="nav-points">🔥 0</div> 
+          <div id="nav-title" class="nav-title">New Member</div> 
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- main -->
+  <section class="hero">
+    <div class="hero-inner">
+      <!-- heading + tagline -->
+      <h1>Welcome to the Messy Tabs Society</h1>
+      <p>Where your messy tabs find new life.</p>
+
+      <!-- big buttons -->
+      <div class="hero-buttons">
+        <!-- "Submit" directs to submission form -->
+        <a href="/submit" class="btn-light">Submit a Tab</a>
+        <!-- "Archive" directs to existing submissions -->
+        <a href="/archive" class="btn-dark">Browse Archive</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- community stats -->
+  <!-- total number of submissions -->
+  <section class="stats">
+    <h3><%= totalTabs %> tabs released by our community</h3>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <p>© 2025 The Messy Tabs Society • Made with ☕ and curiosity</p>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

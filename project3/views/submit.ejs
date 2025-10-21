@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Submit a Tab - Messy Tabs Society</title>
+
+  <!-- inter font load -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <!-- title -->
+      <h2>Submit Your Messy Tab</h2>
+
+      <!-- nav bar -->
+      <nav>
+        <a href="/" class="<%= (page === 'home') ? 'active' : '' %>">Home</a>
+        <a href="/archive" class="<%= (page === 'archive') ? 'active' : '' %>">Archive</a>
+        <a href="/submit" class="<%= (page === 'submit') ? 'active' : '' %>">Submit</a>
+        <a href="/leaderboard" class="<%= (page === 'leaderboard') ? 'active' : '' %>">Leaderboard</a>
+
+        <div class="nav-points-box">
+          <div id="nav-points">🔥 0</div>
+          <div id="nav-title" class="nav-title">New Member</div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main class="form-section">
+    <!-- form title -->
+    <h1>Share Your Messy Tab</h1>
+
+    <!-- submission form -->
+    <form action="/submit" method="POST">
+      <!-- name -->
+      <input type="text" name="name" placeholder="Your Name (optional)">
+
+      <!-- URL & require url -->
+      <input type="url" name="url" placeholder="Paste your lost tab link" required>
+
+      <!-- description -->
+      <textarea name="description" placeholder="Why was it open? (optional)"></textarea>
+
+      <!-- submit button -->
+      <button type="submit">Submit My Messy Tab</button>
+    </form>
+    <p id="points-display">Your total releases: 0</p>
+
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <a href="/">← Back Home</a>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
