@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>make a post</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="form">
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <input type="text" name="status" placeholder="send your thoughts...">
+                <input type="file" name="theImage">
+                <input type="radio" name="hi">
+                <input type="submit" value="post">
+            </form>
+        </div>
+
+        <div class="posts">
+            <% for(let p of allPosts){ %>
+
+                <div class="time">
+                    <p> <%= p.time %></p>
+                </div>
+                
+                <div class="status">
+                    <p> <%= p.text %></p>
+                </div>
+
+                <div class="image">
+                    <img src=<%=p.imgSrc %>>
+                </div>
+            <% } %>
+        </div>
+    </body>
+</html>

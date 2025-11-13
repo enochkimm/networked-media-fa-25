@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaderboard - Messy Tabs Society</title>
+
+  <!-- inter font load -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <!-- title -->
+      <h2>🏆 Leaderboard</h2>
+
+      <!-- nav bar -->
+      <nav>
+        <a href="/" class="<%= (page === 'home') ? 'active' : '' %>">Home</a>
+        <a href="/archive" class="<%= (page === 'archive') ? 'active' : '' %>">Archive</a>
+        <a href="/submit" class="<%= (page === 'submit') ? 'active' : '' %>">Submit</a>
+        <a href="/leaderboard" class="<%= (page === 'leaderboard') ? 'active' : '' %>">Leaderboard</a>
+
+        <div class="nav-points-box">
+          <div id="nav-points">🔥 0</div> 
+          <div id="nav-title" class="nav-title">New Member</div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main class="leaderboard">
+    <!-- title for leaderboard -->
+    <h1>Global Points Leaderboard</h1>
+    <p style="text-align:center; color:#666; margin-bottom:1rem;">
+      Ranks based on total points earned
+    </p>
+
+    <!-- leaderboard table -->
+    <table>
+      <tr>
+        <!-- headers -->
+        <th>Rank</th>
+        <th>User ID</th>
+        <th>Title</th>
+        <th>Total Points</th>
+      </tr>
+
+      <% leaderboard.forEach((u) => { %>
+        <tr>
+          <td><%= u.rank %></td> <!-- rank -->
+          <td><%= u.userID %></td> <!-- unique user ID -->
+          <td><%= u.title %></td> <!-- user title -->
+          <td style="font-weight:700;"><%= u.points %></td> <!-- total user points -->
+        </tr>
+      <% }) %>
+    </table>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <a href="/">← Back Home</a>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

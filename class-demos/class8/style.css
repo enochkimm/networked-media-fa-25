@@ -1,0 +1,49 @@
+body{
+    background-color: navy;
+    /* vertical height is the unit based off of how many pixels in the screen */
+    /* you could also use %, sometimes that creates a scroll */
+    height: 100vh;
+    margin: 0;
+}
+
+.content-container{
+    background-color: rgb(205, 7, 205);
+
+    padding: 10px;
+
+    position: relative;
+    margin-top: 200px;
+}
+
+.parent1{
+    background-color: yellow;
+    /* adding display of flex to parent */
+    display: flex;
+    /* center items horizontally */
+    justify-content: center;
+    /* center items vertically */
+    align-items: center;
+    /* gap adds a space between the items that you specify */
+    gap: 40px;
+    height: 50%;
+
+}
+
+.child{
+    background-color: chartreuse;
+    height: 100px;
+    width: 100px;
+
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#rotate{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+
+    top: 0;
+}

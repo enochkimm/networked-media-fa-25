@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>add korean text</title>
+    <link href="/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h3>add a korean message to the database</h3>
+
+    <form action="/post" method="POST">
+      <textarea
+        name="text"
+        placeholder="write korean text here"
+        required
+      ></textarea>
+
+      <br /><br />
+      <input type="submit" value="add to database" />
+    </form>
+
+    <hr />
+
+    <div>
+      <% for (let p of posts) { %>
+      <p>
+        <span class="date-text"><%= p.date %></span><br />
+        <%= p.text %>
+      </p>
+      <% } %>
+    </div>
+  </body>
+</html>

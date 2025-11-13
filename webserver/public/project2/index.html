@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🍴 Food Clock</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+</head>
+<body>
+  <!-- the reference table -->
+  <div id="legend">
+    <h3>Food Digits</h3>
+    <p>🥩 = 1 | 🥔 = 2 | 🥚 = 3</p>
+    <p>🍗 = 4 | 🐟 = 5 | 🥦 = 6</p>
+    <p>🥙 = 7 | 🧅 = 8 | 🍖 = 9</p>
+    <p>🍚 = 0</p>
+  </div>
+
+  <!-- main stuff -->
+  <div class="main-content">
+    <h1>🍴 Food Clock</h1>
+
+    <div id="clock">
+      <div id="hour-hand" class="hand"></div>
+      <div id="minute-hand" class="hand"></div>
+      <div id="second-hand" class="hand"></div>
+      <div id="center">🍚</div>
+      <div id="digital">00:00:00</div>
+    </div>
+
+    <h2 id="meal-label">Morning - Breakfast</h2>
+    <div id="food-display">🥣🍓🍯</div>
+    <p id="reminder">hungry?</p>
+
+    <div class="btn-row">
+      <button id="check-btn">✅ I Ate</button>
+      <button id="skip-btn">❌ Skip</button>
+    </div>
+
+    <p id="status">Meals: morning ❌ | afternoon ❌ | night ❌</p>
+    <p id="progress">Meals eaten: 0/3 ❌ u failed</p>
+
+    <div class="btn-row">
+      <button id="jump-morning">⏩ Morning</button>
+      <button id="jump-afternoon">⏩ Afternoon</button>
+      <button id="jump-night">⏩ Night</button>
+    </div>
+
+    <audio id="alarm-sound"
+      src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg">
+    </audio>
+  </div>
+</body>
+</html>
