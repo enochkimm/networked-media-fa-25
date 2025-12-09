@@ -1,0 +1,10 @@
+{"text":"나 오늘 좀 피곤하다","date":"11/12/2025, 11:04:40 PM","timestamp":1763006680473,"_id":"iWOOElbV6gfcwurc"}
+{"text":"아 뭐야 갑자기 비 오네","date":"11/12/2025, 11:04:49 PM","timestamp":1763006689146,"_id":"V9eCddSChU7KlUTS"}
+{"text":"그냥 멍 때리고 있었어","date":"11/12/2025, 11:04:55 PM","timestamp":1763006695138,"_id":"cQZt8iIsVkQlk8pl"}
+{"text":"배고픈데 뭐 먹지","date":"11/12/2025, 11:04:59 PM","timestamp":1763006699457,"_id":"1vfxNdNKWQB2HGvR"}
+{"text":"나 지금 음악 듣는 중","date":"11/12/2025, 11:05:03 PM","timestamp":1763006703898,"_id":"PgYNGTfGRjrYSc4A"}
+{"text":"솔직히 좀 귀찮다","date":"11/12/2025, 11:05:07 PM","timestamp":1763006707615,"_id":"9CBcflNRvvQLsW5j"}
+{"text":"오늘 공기 약간 차갑다","date":"11/12/2025, 11:05:10 PM","timestamp":1763006710922,"_id":"r5oCrhTM6RDMwxx3"}
+{"text":"방 정리해야 하는데 하기 싫다","date":"11/12/2025, 11:05:14 PM","timestamp":1763006714940,"_id":"Mkm823ePyWKLQUZs"}
+{"text":"그냥 누워있고 싶다","date":"11/12/2025, 11:05:18 PM","timestamp":1763006718275,"_id":"p7AKbxCB86cDprVj"}
+{"text":"요즘 시간 너무 빨리 간다","date":"11/12/2025, 11:05:22 PM","timestamp":1763006722003,"_id":"S0J1tAKQoIuKymU6"}
